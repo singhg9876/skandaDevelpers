@@ -1,0 +1,515 @@
+.topWallText {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+}
+.topWallText2{
+    font-size: 5vw;
+}
+.navSubmitBtn {
+    color: black;
+    background: linear-gradient(90deg, rgba(174, 134, 37, 1) 16%, rgba(230, 196, 128, 1) 50%, rgba(224, 170, 62, 1) 100%);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 5px;
+}
+
+.nav-link {
+    color: black;
+    padding-right: 30px;
+}
+
+.nav-link:hover {
+    color: black;
+    background: #6BD7E3;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+}
+
+.btnSendMsg {
+    color: white;
+    background-color: #DAAF4D;
+    border: none;
+    border-radius: 8px;
+    padding: 0px 20px;
+    font-size: 16px;
+}
+
+.products {
+    width: 90%;
+    margin: auto;
+}
+
+.productsCard {
+    border-radius: 8px;
+    width: 58%;
+    margin-right: 1%;
+    background: linear-gradient(180deg, rgba(218, 175, 77, 1) 0%, rgba(30, 52, 38, 0.5) 80%);
+    padding: 30px;
+    border: 1px solid #DAAF4D;
+}
+
+.counterCard {
+    border-radius: 8px;
+    /* margin-right: 1%; */
+    background: linear-gradient(180deg, rgba(218, 175, 77, 1) 0%, rgba(30, 52, 38, 0.5) 80%);
+    padding: 30px;
+    border: 1px solid #DAAF4D;
+    min-height: 260px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+/* =========================================================navbar close ///////////////////////////////////////////////// */
+
+
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion {
+    --bs-accordion-border-radius: 0px
+}
+
+.accordion-body {
+    background-color: transparent;
+}
+
+.careerSec .accordion-button:not([class*=" "]):not([class*="collapsed"]) {
+    /* background-color: #DAAF4D; */
+    color: black;
+    font-weight: 600;
+    font-size: 21px;
+    border-radius: 0px;
+}
+
+.aboutSec .accordion-item:not([class*=" "]):not([class*="collapsed"]) {
+    background-color: transparent;
+    border: 1px solid #DAAF4D;
+}
+
+.aboutSec .accordion-item {
+    background-color: transparent;
+    border: none;
+    border: 1px solid #DAAF4D;
+}
+
+.aboutSec .accordion-button:not([class*=" "]):not([class*="collapsed"]) {
+    background-color: transparent;
+    color: #DAAF4D;
+    font-weight: 600;
+    font-size: 21px;
+    border-radius: 0px;
+}
+
+.aboutSec .accordion-button {
+    background-color: transparent;
+    color: #DAAF4D;
+    font-weight: 600;
+    font-size: 21px;
+    border-radius: 0px;
+}
+
+.careerSec .accordion-button {
+    background-color: transparent;
+    /* color: white; */
+    font-size: 21px;
+    border-radius: 0px;
+}
+
+.accordion-body {
+    min-height: 150px;
+}
+
+
+
+hr {
+    color: #8B8A8A;
+}
+
+footer a {
+    text-decoration: none;
+    display: block;
+    color: #DEDEDE;
+    text-align: left;
+    padding-left: 44%;
+    padding-bottom: 5px;
+}
+
+.title {
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: inline;
+    padding-left: 10px;
+    padding-bottom: 0px;
+}
+
+.footerDiv div img {
+    margin-bottom: 10px;
+}
+
+.contact_right {
+    font-size: 24px;
+    color: #F4F4F4;
+    z-index: 5;
+}
+
+.counter-value {
+    font-size: 42px;
+    font-weight: 600;
+    margin: 10px 0 0;
+}
+
+.counter-label {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.contact_right input {
+    border: 1px solid #D3D2E1;
+    border-radius: 4px;
+    /* padding: 10px; */
+    color: white;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #715D2F;
+}
+
+.contact_right textarea {
+    border: 1px solid #D3D2E1;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    height: 100px;
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 10px;
+    background-color: #715D2F;
+}
+
+.servicesCard {
+    border: 1px solid transparent;
+    border-image: linear-gradient(145deg, rgba(218, 175, 77, 1) 36%, rgba(255, 255, 255, 1) 57%, rgba(30, 52, 38, 1) 87%) 1;
+    border-radius: 8px;
+    width: 24%;
+    margin: 30px 5px 30px 5px;
+    background-color: #63c8e480;
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.servicesCard:hover {
+    background: #63c8e480;
+    margin: 5px 5px 5px 5px;
+    padding: 20px 0px;
+    background: linear-gradient(180deg, rgb(98, 223, 237) 0%, rgba(30, 52, 38, 1) 90%);
+}
+
+.servicesCardTrans {
+    min-height: 100px;
+    width: 31%;
+    color: white;
+}
+
+.innerSerCard {
+    margin: 30px;
+}
+
+.productPrice {
+    font-size: 40px;
+    font-weight: 700;
+    color: #DAAF4D;
+}
+
+.certCardParent {
+    display: flex;
+}
+
+.scrollable {
+    overflow-y: auto;
+    height: 270px;
+}
+
+.scrollable {
+    scrollbar-color: #DAAF4D rgba(36, 33, 33, 0.481);
+    scrollbar-width: thin;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #DAAF4D;
+}
+
+.sliding-image {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.6s ease-in-out;
+}
+
+.sliding-image.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.clickable-image {
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden2 {
+    display: none;
+}
+
+.popup-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.productImgLeft {
+    width: 40%;
+}
+
+.prodImage {
+    margin-top: 5%;
+}
+
+.counterCard {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.radioSelectionContacts>input {
+    width: auto;
+}
+
+.planTypes {
+    display: inline;
+    border-radius: 25px;
+    padding: 5px 10px;
+    border: 1px solid #DAAF4D;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.monthTypes {
+    display: inline;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 100px;
+    padding: 5px 20px;
+    border: 1px solid #DAAF4D;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.planTypes2 {
+    display: inline;
+    border-radius: 25px;
+    padding: 5px 10px;
+    border: 1px solid #DAAF4D;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.monthTypes2 {
+    display: inline;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 20px;
+    border: 1px solid #DAAF4D;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.planTypes3 {
+    display: inline;
+    border-radius: 25px;
+    padding: 5px 10px;
+    border: 1px solid #DAAF4D;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.monthTypes3 {
+    display: inline;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 5px 20px;
+    border: 1px solid #DAAF4D;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.planTypes4 {
+    display: inline;
+    border-radius: 25px;
+    padding: 5px 10px;
+    border: 1px solid #DAAF4D;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.monthTypes4 {
+    display: inline;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border: 1px solid #DAAF4D;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.expoImageText {
+    font-size: 27px;
+}
+
+.expoMob {
+    display: none;
+}
+
+.expoDesktop {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .expoMob {
+        display: block;
+    }
+
+    .expoDesktop {
+        display: none;
+    }
+
+    .expoImageText {
+        font-size: 5px;
+    }
+
+    .productsCard {
+        border-radius: 8px;
+        width: 100%;
+        margin-right: 1%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 30px;
+
+    }
+
+    footer a {
+        text-decoration: none;
+        display: block;
+        color: #DEDEDE;
+        text-align: center;
+        padding-left: 0%;
+        padding-bottom: 5px;
+    }
+
+    /* .productPrice {
+        font-size: 50px;
+        font-weight: 700;
+    } */
+
+    .servicesCardTrans, .servicesCard, .servicesCardLast {
+        width: 100%;
+    }
+
+    .certCardParent {
+        display: block;
+    }
+
+    .resultCard {
+        margin-bottom: 30px;
+    }
+
+    .certCard {
+        width: 100%;
+    }
+
+    .productImgLeft {
+        width: 100%;
+    }
+
+    .prodImage {
+        margin-top: 5%;
+    }
+}
+
+.gallery {
+    height: 250px;
+}

@@ -1,0 +1,730 @@
+<!-- https://cssgradient.io/ -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skanda Constructions</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> -->
+
+    <!-- =========================================================================================================================================================== -->
+    <style>
+        /* Popup container */
+        .custom-popup {
+            display: none;
+            /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black background with transparency */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Popup content */
+        .custom-popup-content {
+            background: transparent;
+            padding: 20px;
+            /* border-radius: 10px; */
+            text-align: center;
+            position: relative;
+            max-width: 90%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Close button */
+        .custom-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Image styling */
+        .custom-popup-image {
+            max-width: 100%;
+            height: auto;
+            /* border-radius: 5px; */
+        }
+    </style>
+
+    <style>
+        .modal-content {
+            background-color: transparent;
+            border: none;
+        }
+
+        .close {
+            color: white;
+        }
+
+        .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-body img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .modal-dialog {
+            max-width: 70vw;
+            margin: 0 auto;
+        }
+    </style>
+    <!-- =========================================================================================================================================================== -->
+
+
+    <style>
+        @media (max-width: 768px) {
+            .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-start,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        @media (min-width: 768px) {
+
+            .carousel-inner .carousel-item-right.active,
+            .carousel-inner .carousel-item-next,
+            .carousel-item-next:not(.carousel-item-start) {
+                transform: translateX(25%) !important;
+            }
+
+            .carousel-inner .carousel-item-left.active,
+            .carousel-item-prev:not(.carousel-item-end),
+            .active.carousel-item-start,
+            .carousel-item-prev:not(.carousel-item-end) {
+                transform: translateX(-25%) !important;
+            }
+
+            .carousel-item-next.carousel-item-start,
+            .active.carousel-item-end {
+                transform: translateX(0) !important;
+            }
+
+            .carousel-inner .carousel-item-prev,
+            .carousel-item-prev:not(.carousel-item-end) {
+                transform: translateX(-25%) !important;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: transparent;
+                background-image: none;
+            }
+
+            .carousel-control-prev-icon::after,
+            .carousel-control-next-icon::after {
+                content: '';
+                /* Clear the default icon */
+                display: inline-block;
+                width: 1em;
+                /* Adjust size as needed */
+                height: 1em;
+                /* Adjust size as needed */
+                border: solid white;
+                /* Set the border color to black */
+                border-width: 0 2px 2px 0;
+                /* Create an arrow shape */
+                padding: 3px;
+                /* Adjust padding for size */
+                transform: rotate(135deg);
+                /* Rotate for the previous icon */
+            }
+
+            .carousel-control-next-icon::after {
+                transform: rotate(-45deg);
+                /* Rotate for the next icon */
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 50px;
+            }
+
+            .carousel-control-prev {
+                left: -60px;
+            }
+
+            .carousel-control-next {
+                right: -60px;
+            }
+        }
+    </style>
+    <style>
+        body {
+            margin: auto;
+            background: #fff;
+            color: black;
+        }
+
+        .aboutSec .accordion-button::after {
+            content: '+';
+            font-size: 1.5rem;
+            float: right;
+        }
+
+        .aboutSec .accordion-button.collapsed::after {
+            content: '+';
+        }
+
+        .aboutSec .accordion-button:not(.collapsed)::after {
+            content: '-';
+        }
+
+        .custom-navbar {
+            background-color: white !important;
+        }
+
+        .custom-navbar .nav-link.active {
+            color: #DAAF4D !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!---------------- navbar--- -->
+    <nav class="navbar custom-navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark"
+        style="padding: 0px;">
+        <div class="container-fluid" style="padding: 0px;">
+            <a class="navbar-brand" href=""><img src="./static/images/logo_skanda.png" alt=""
+                    style="height: 90px;padding: 0px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item" style="padding-right: 20px;">
+                        <a class="nav-link" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item" style="padding-right: 20px;">
+                        <a class="nav-link" href="#AboutUs">About</a>
+                    </li>
+                    <li class="nav-item" style="padding-right: 20px;">
+                        <a class="nav-link" href="#Products">Services</a>
+                    </li>
+                    <li class="nav-item" style="padding-right: 20px;">
+                        <a class="nav-link" href="#Projects">Projects</a>
+                    </li>
+                    <li class="nav-item" style="padding-right: 30px;">
+                        <a style="background-color: #6BD7E3;border-radius: 20px;" class="nav-link"
+                            href="#ContactUs">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br>
+    <!-- Home -->
+    <section>
+        <div style="position: relative;">
+            <img src="./static/images/topWall.png" width="100%" alt="">
+            <div class="overlay-text text-center topWallText">Your Trusted Partner in Real Estate
+                <span class="topWallText2">Development</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  About Us -->
+    <section id="AboutUs" style="width: 100%;">
+        <br>
+        <div style="width: 90%;margin: auto;" style="background-color: transparent;">
+            <h1 class="title">About Us</h1>
+            <ul style="font-size: 20px;">
+                <li>At Skanda Developers, we believe in transforming dreams into reality by
+                    crafting high-quality, sustainable, and modern living spaces. With a deep-rooted
+                    commitment to integrity, innovation, and excellence, we have successfully
+                    positioned ourselves as one of the most trusted real estate developers in
+                    Hyderabad, Bengaluru, and Mumbai.</li>
+                <li>Our expertise lies in residential and commercial real estate, offering ultramodern apartments,
+                    luxurious villas, and eco-friendly farm plots. Whether
+                    you're looking for an investment opportunity or your dream home, Skanda
+                    Developers ensures a seamless experience backed by quality, transparency,
+                    and trust skandadevelopers.org</li>
+            </ul>
+            </p>
+        </div>
+    </section>
+
+    <!--  Our Services -->
+    <section id="Services" style="width: 100%;">
+        <br>
+        <div style="width: 90%;margin: auto;">
+            <h1 class="title" style="margin-bottom: 0px;">Our Services</h1>
+            <span style="font-weight: 600;">We offer comprehensive real estate solutions tailored to your needs:</span>
+
+            <div class="row m-auto">
+                <div class="servicesCard">
+                    <div class="innerSerCard">
+                        <img class="sliding-image hidden" src="./static/images/service/trading icon.png" alt=""
+                            style="height: 50px;">
+                        <p>Residential Developments</p>
+                        <hr>
+                        <p style="font-weight: 500;text-align: left;font-size: 20px;"> Luxurious apartments, gated communities, and
+                            modern townships.</p>
+                    </div>
+                </div>
+                <div class="servicesCard">
+                    <div class="innerSerCard">
+                        <img class="sliding-image hidden" src="./static/images/service/revenue stream icon.png" alt=""
+                            style="height: 50px;">
+                        <p>Commercial Spaces</p>
+                        <hr>
+                        <p style="font-weight: 500;text-align: left;font-size: 20px;">High-end office spaces, IT parks, and retail hubs.
+                        </p>
+                    </div>
+                </div>
+                <div class="servicesCard">
+                    <div class="innerSerCard">
+                        <img class="sliding-image hidden" src="./static/images/service/certificate icon.png" alt=""
+                            style="height: 50px;">
+                        <p>Industrial & Logistics</p>
+                        <hr>
+                        <p style="font-weight: 500;text-align: left;font-size: 20px;">Warehousing solutions and industrial parks.
+                        </p>
+                    </div>
+                </div>
+                <div class="servicesCard">
+                    <div class="innerSerCard">
+                        <img class="sliding-image hidden" src="./static/images/service/global icon.png" alt=""
+                            style="height: 50px;">
+                        <p>Property Management</p>
+                        <hr>
+                        <p style="font-weight: 500;text-align: left;font-size: 20px;">– End-to-end property maintenance and rental
+                            management services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+    </section>
+
+    <!--  Our Projects -->
+    <section id="ourProjects" style="width: 100%;">
+        <br>
+        <div style="width: 90%;margin: auto;" style="background-color: transparent;">
+            <h1 class="title">Our Projects</h1>
+            <h5>Ongoing Project</h5>
+            <ul>
+                <li><b>The Breeze</b> – A modern, high-rise development that embodies elegance and
+                comfort</li>
+                <li><b>Twin Diamonds (Completed Project)</b> – A 1.3-acre, HMDA-approved project completed between
+                2008-2012</li>
+            </ul>
+            <h5>Upcoming Projects</h5>
+            <ul>
+
+                <li><b>Sarjapura, Bengaluru </b>– A 3-acre, 12-floor residential project.</li>
+                <li><b>Navi Mumbai</b> – 35-floor luxury living on a 1.2-acre plot.</li>
+                <li><b>Hyderabad West </b>– An ultra-high-rise living space.</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!--  Connect with Us -->
+    <section id="ContactUs" style="width: 100%;">
+        <br>
+        <div style="width: 90%;margin: auto;" style="background-color: transparent;">
+
+            <h1 class="title">Connect with Us</h1><br><br>
+            <div class="row m-auto">
+                <div class="col-md-5 col-sm-12">
+                    <br>
+                    <div style="display: flex;">
+                        <img src="./static/images/contactLocation.png"
+                            style="margin-right: 20px;height: 50px;width: 50px;" alt="">
+                        Flat No: 502, Plot No: 75. Twin Diamonds <br>Apartment, Alkapur, Rajendranagar,<br> Rangareddy.
+                        Telangana 500089, India.
+                    </div><br><br>
+                    <div style="display: flex;">
+                        <img src="./static/images/contactMessage.png"
+                            style="margin-right: 20px;height: 50px;width: 50px;" alt="">
+                        <span style="padding-top: 10px;">Email: info@skandadevelopers.org</span>
+                    </div><br><br>
+                    <div style="display: flex;">
+                        <img src="./static/images/contactCall.png" style="margin-right: 20px;height: 50px;width: 50px;"
+                            alt="">
+                        <span style="padding-top: 10px;">Phone: +91 9052 841 841</span>
+                    </div>
+                    <span></span>
+                </div>
+                <div class="col-md-7 col-sm-12">
+                    <div class="row m-auto">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="fName" style="color: #1A1A1A;" class="form-label">First Name
+                                    <sup>*</sup></label>
+                                <input type="text" style="border: 3px solid #6BD7E3;" class="form-control" id="fName"
+                                    placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="lName" style="color: #1A1A1A;" class="form-label">Last Name</label>
+                                <input type="text" style="border: 3px solid #6BD7E3;" class="form-control" id="lName"
+                                    placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mb-3">
+                                <label for="email" style="color: #1A1A1A;" class="form-label">Email Address
+                                    <sup>*</sup></label>
+                                <input type="text" style="border: 3px solid #6BD7E3;" class="form-control" id="email"
+                                    placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mb-3">
+                                <label for="message" style="color: #1A1A1A;" class="form-label">Message/your
+                                    question</label>
+                                <textarea style="border: 3px solid #6BD7E3;" class="form-control" id="message"
+                                    rows="4"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-sm-12">
+                            <button class="btn btn-info"
+                                style="color: white;border-radius: 20px;padding: 5px 20px;">Send Message
+                                &#8594;</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br><br><br><br>
+    </section>
+
+    <!--  FAQ -->
+    <section id="Careers" style="width: 100%;">
+        <br>
+        <div style="width: 90%;margin: auto;" style="background-color: transparent;">
+
+            <h1 class="title">Frequently Asked Questions</h1><br><br>
+            <div class="accordion careerSec" id="accordionPanelsStayOpenExample">
+
+                <!-- <div class="accordion-item"
+                    style="background-color: transparent;border: 1px solid #000;border-radius: 0px;">
+                    <h2 class="accordion-header">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                What type of construction does SD does?
+                            </button>
+                        </div>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Proven working experience as a What type of constructions does Skanda do?, sales executive or
+                                    a
+                                    relevant role</li>
+                                <li>2+ years of experience in sales or business development roles.</li>
+                            </ul>
+                            Skanda developers engage in a wide range of construction activities, spanning residential, commercial, industrial, and infrastructure projects.
+
+                        </div>
+                    </div>
+                </div> -->
+                <div class="accordion-item"
+                    style="background-color: transparent;border: 1px solid #000;border-radius: 25px;">
+                    <h2 class="accordion-header">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapse2">
+                                What type of constructions does Skanda do?
+                            </button>
+                        </div>
+                    </h2>
+                    <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Skanda developers engage in a wide range of construction activities, spanning residential, commercial, industrial, and infrastructure projects.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"
+                    style="background-color: transparent;border: 1px solid #000;border-radius: 25px;">
+                    <h2 class="accordion-header">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapse3">
+                                What type of constructions does Skanda do?
+                            </button>
+                        </div>
+                    </h2>
+                    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+
+                            Skanda developers engage in a wide range of construction activities, spanning residential, commercial, industrial, and infrastructure projects.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"
+                    style="background-color: transparent;border: 1px solid #000;border-radius: 25px;">
+                    <h2 class="accordion-header">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapse4">
+                                What type of constructions does Skanda do?
+                            </button>
+                        </div>
+                    </h2>
+                    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+
+                            Skanda developers engage in a wide range of construction activities, spanning residential, commercial, industrial, and infrastructure projects.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"
+                    style="background-color: transparent;border: 1px solid #000;border-radius: 25px;">
+                    <h2 class="accordion-header">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapse5">
+                                What type of constructions does Skanda do?
+                            </button>
+                        </div>
+                    </h2>
+                    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Skanda developers engage in a wide range of construction activities, spanning residential, commercial, industrial, and infrastructure projects.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+    </section>
+
+    <!--  Reviews -->
+    <section id="Results" style="width: 100%;">
+        <br>
+        <div id="myCarousel2" class="carousel slide" style="width: 90%;margin: auto;" data-bs-ride="carousel2">
+            <div class="text-center">
+                <h1 class="title">What Our Customers Say...</h1>
+            </div>
+
+            <div class="carousel-inner w-100">
+                <div class="carousel-item carousel-item2 active">
+                    <div class="col-md-4" style="margin-right: 10px;">
+                        <div class="card-body" style="padding: 20px;">
+                            <img class="sliding-image hidden" src="./static/images/reviews/testimonial.png" alt=""
+                                style="border-radius: 50%;height: 100px;">
+                            <p style="font-size: 24px;text-align: left;font-weight: 600;margin-bottom: 0px;"
+                                class="card-title">Sarah Thompson</p>
+                            <p style="font-size: 16px;text-align: left;" class="card-title">
+                                The professionalism and expertise of Skanda Developers have transformed my home into a
+                                sanctuary I truly love
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item2">
+                    <div class="col-md-4" style="margin-right: 10px;">
+                        <div class="card-body" style="padding: 20px;">
+                            <img class="sliding-image hidden" src="./static/images/reviews/testimonial.png" alt=""
+                                style="border-radius: 50%;height: 100px;">
+                            <p style="font-size: 24px;text-align: left;font-weight: 600;margin-bottom: 0px;"
+                                class="card-title">David Lee</p>
+                            <p style="font-size: 16px;text-align: left;" class="card-title">
+                                <!-- Software Engineer <br> -->
+                                Skanda Developers provided exceptional service throughout our home-buying journey. Their
+                                attention to detail is unmatched.
+                                <br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item2">
+                    <div class="col-md-4" style="margin-right: 10px;">
+                        <div class="card-body" style="padding: 20px;">
+                            <img class="sliding-image hidden" src="./static/images/reviews/testimonial.png" alt=""
+                                style="border-radius: 50%;height: 100px;">
+                            <p style="font-size: 24px;text-align: left;font-weight: 600;margin-bottom: 0px;"
+                                class="card-title">Anil Reddy</p>
+                            <p style="font-size: 16px;text-align: left;" class="card-title">
+                                From design to delivery, the entire process was seamless. The transparency and quality
+                                exceeded my expectations!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <br><br>
+    </section>
+
+    <!--  Footer- -->
+    <br>
+    <footer style="background-color: black;color: white;">
+        <br>
+        <div class="container m-auto text-center row footerDiv">
+            <div class="col-lg-4">
+                <img class="sliding-image hidden" src="./static/images/footer/call.png" alt="">
+                <p>+123 4567890</p>
+            </div>
+            <div class="col-lg-4">
+                <img class="sliding-image hidden" src="./static/images/footer/email.png" alt="">
+                <p>info@skandadevelopers.org</p>
+            </div>
+            <div class="col-lg-4">
+                <img class="sliding-image hidden" src="./static/images/footer/location.png" alt="">
+                <p>Alkapuri Hyderabad, India</p>
+            </div>
+        </div>
+        <div class="my-1 m-auto" style="height: 1.5px;background: #8B8A8A;width: 90%;"></div>
+        <div class="container m-auto text-center row">
+            <div class="col-lg-4">
+                <a href="">Home</a>
+                <a href="#AboutUs">About Us</a>
+                <a href="#Products">Products</a>
+                <a href="#Services">Services</a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#Contact">Contact</a>
+                <a href="#Testimonials">Testimonials</a>
+            </div>
+            <div class="col-lg-4">
+                <a href="./TnC.html">Terms Of Use</a>
+                <a href="./privacy_policy.html">Privacy & Policy</a>
+                <a href="./cancellation.html">Cancellation & Refund</a>
+                <!-- <a href="">Legal Notice</a> -->
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://x.com/sgscript46" title="Twitter" target="_blank"><img
+                    src="./static/images/footer/twitter.png" alt="twitter"></a>
+            <a href="https://www.instagram.com/sgscript/" title="Instagram" target="_blank"><img
+                    src="./static/images/footer/insta.png" alt="twitter"></a>
+            <a href="https://www.linkedin.com/in/sg-services-b85011327/" title="LinkedIn" target="_blank"><img
+                    src="./static/images/footer/linkedin.png" alt="twitter"></a>
+            <a href="https://youtube.com/@sgscript?si=0zZaZijpFcapgqMu" title="YouTube" target="_blank"><img
+                    src="./static/images/footer/youtube.png" alt="twitter"></a>
+            <a href="https://www.facebook.com/profile.php?id=61563656995638" title="Facebook" target="_blank"><img
+                    src="./static/images/footer/fb.png" alt="twitter"></a>
+        </div>
+        <div class="text-center my-2">© 2025 Skanda Developers. All rights reserved.</div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).on("scroll", function () {
+                $(".sliding-image").each(function () {
+                    var imageTop = $(this).offset().top;
+                    var windowBottom = $(window).scrollTop() + $(window).height();
+
+                    if (windowBottom > imageTop) {
+                        $(this).addClass("show").removeClass("hidden");
+                    }
+                });
+            });
+        });
+        //counter up only 1 line
+        $(document).ready(() => $('.counter').counterUp({ delay: 10, time: 2000 }));
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".clickable-image");
+            const popup = document.getElementById("popup");
+            const popupImage = document.getElementById("popup-image");
+            const closePopup = document.getElementById("close-popup");
+            images.forEach(image => {
+                image.addEventListener("click", function () {
+                    const imgSrc = this.src;
+                    popupImage.src = imgSrc;
+                    popup.classList.remove("hidden2");
+                });
+            });
+            closePopup.addEventListener("click", function () {
+                popup.classList.add("hidden2");
+            });
+            popup.addEventListener("click", function (e) {
+                if (e.target === popup) {
+                    popup.classList.add("hidden2");
+                }
+            });
+        });
+
+    </script>
+    <script type='text/javascript'>$('.carousel .carousel-item').each(function () {
+            var minPerSlide = 4;
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < minPerSlide; i++) {
+                next = next.next(); if (!next.length) { next = $(this).siblings(':first'); } next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+
+</body>
+
+</html>
